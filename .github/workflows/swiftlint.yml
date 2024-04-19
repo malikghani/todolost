@@ -19,4 +19,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install SwiftLint
-        run: brew install swiftlint # Install SwiftLint using Homebrew
+        run: mint install realm/SwiftLint
