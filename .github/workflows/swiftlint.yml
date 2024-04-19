@@ -11,6 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
+      - name: Download SwiftLint zip
+        uses: actions/download-artifact@v2
+        with:
+          url: https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
+          name: swiftlint_zip.zip
+
+      - name: Extract SwiftLint
+        uses: actions/extract@v2
+        with:
+          archive-file: swiftlint_zip.zip
+          path: /usr/local/bin
+          
       - uses: actions/checkout@v1
       - name: Danger
         uses: danger/swift@3.18.1
