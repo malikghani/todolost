@@ -11,6 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
+      - name: Install Bundler
+        run: gem install bundler -v 2.4.22
+
+      - name: Configure Bundler
+        run: bundle config silence_root_warning true
+
+      - name: Install Dependencies
+        run: bundle install
+        
+      - name: run
+        run: bundle exec danger
+        
       - uses: actions/checkout@v4
       - name: Danger
         uses: danger/swift@3.18.1
