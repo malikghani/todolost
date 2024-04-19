@@ -1,4 +1,5 @@
 import Danger
+import SwiftLint
 
 let danger = Danger()
 
