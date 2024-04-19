@@ -19,6 +19,9 @@ jobs:
         
       - name: List Files in /usr/local/bin
         run: ls -l /usr/local/bin
+        
+      - name: permission in /usr/local/bin
+        run: chmod +x /usr/local/bin/swiftlint
 
       - name: Verify SwiftLint Version
         run: /usr/local/bin/swiftlint version
