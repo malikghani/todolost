@@ -13,21 +13,9 @@ jobs:
     steps:
       - name: Download SwiftLint zip
         run: wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
-
-      - name: Extract SwiftLint
-        run: unzip -o swiftlint_linux.zip -d /usr/local/bin
-        
-      - name: List Files in /usr/local/bin
-        run: ls -l /usr/local/bin
-        
-      - name: permission in /usr/local/bin
-        run: chmod +x /usr/local/bin/swiftlint
-
-      - name: Verify SwiftLint Version
-        run: /usr/local/bin/swiftlint version
           
       - uses: actions/checkout@v1
-      - run: pwd
+      - run: pwd && unzip -o swiftlint_linux.zip -d /usr/local/bin && ls
       - name: Danger
         uses: danger/swift@3.18.1
         with:
