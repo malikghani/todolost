@@ -16,6 +16,12 @@ jobs:
 
       - name: Extract SwiftLint
         run: unzip -o swiftlint_linux.zip -d /usr/local/bin
+        
+      - name: List Files in /usr/local/bin
+        run: ls -l /usr/local/bin
+
+      - name: Verify SwiftLint Version
+        run: /usr/local/bin/swiftlint version
           
       - uses: actions/checkout@v1
       - name: Danger
