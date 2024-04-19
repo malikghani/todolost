@@ -16,12 +16,12 @@ jobs:
         with:
           url: https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
           name: swiftlint_zip.zip
-
+          
       - name: Extract SwiftLint
-        uses: actions/extract@v2
+        uses: ihiroky/extract-action@v1
         with:
-          archive-file: swiftlint_zip.zip
-          path: /usr/local/bin
+          file_path: swiftlint_zip.zip
+          extract_dir: /usr/local/bin
           
       - uses: actions/checkout@v1
       - name: Danger
