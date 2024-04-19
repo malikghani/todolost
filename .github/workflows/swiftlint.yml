@@ -27,6 +27,7 @@ jobs:
         run: /usr/local/bin/swiftlint version
           
       - uses: actions/checkout@v1
+      - run: pwd
       - name: Danger
         uses: danger/swift@3.18.1
         with:
