@@ -1,5 +1,5 @@
 //
-//  CartItem.swift 
+//  CartItem.swift
 //  ToDoList
 //
 //  Created by Ghani's Mac Mini on 20/04/2024.
@@ -12,3 +12,4 @@ struct CartItem   {
    let price:Int
    let quantity: Int
 }
+     

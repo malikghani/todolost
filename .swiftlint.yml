@@ -1,0 +1,5 @@
+disabled_rules:
+  - colon # Disable the warning for colons
+
+opening_brace:
+    severity: error # Make the opening brace warning an error
