@@ -12,8 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: sinoru/actions-setup-swift@v2
-        with:
-          swift-version: '5.9'
-      - name: GitHub Actions for SwiftLint
-        uses: sinoru/actions-swiftlint@v6
+      - name: GitHub Action for SwiftLint
+        uses: stanfordbdhg/action-swiftlint@v4
