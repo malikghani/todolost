@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Danger
-        uses: danger/swift@3.18.0
+        uses: danger/swift@3.18.1
         with:
             args: --failOnErrors --no-publish-check
         env:
