@@ -1,4 +1,4 @@
-//        
+//
 //  CartItem.swift
 //  ToDoList
 //
