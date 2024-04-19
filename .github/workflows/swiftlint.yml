@@ -15,7 +15,7 @@ jobs:
         run: wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
           
       - uses: actions/checkout@v1
-      - run: pwd && unzip -o swiftlint_linux.zip -d /usr/local/bin && ls
+      - run: pwd && wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip && unzip -o swiftlint_linux.zip -d /usr/local/bin && ls
       - name: Danger
         uses: danger/swift@3.18.1
         with:
