@@ -8,13 +8,13 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Danger
         uses: danger/swift@3.18.1
         with:
             args: --failOnErrors --no-publish-check
-        env:
+        env:Container action is only supported on Linux
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
