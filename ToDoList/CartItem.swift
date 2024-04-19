@@ -7,3 +7,8 @@
 
 import Foundation
 
+struct CartItem   {
+   let name: String
+   let price:Int
+   let quantity: Int
+}
