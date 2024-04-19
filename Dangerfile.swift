@@ -3,4 +3,4 @@ import Danger
 let danger = Danger()
 
 // Run SwiftLint
-SwiftLint.lint(inline: true)
+SwiftLint.lint(inline: true, executable: "swiftlint")
