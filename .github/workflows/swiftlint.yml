@@ -12,16 +12,10 @@ jobs:
     name: "Run Danger"
     steps:
       - name: Download SwiftLint zip
-        uses: actions/download-artifact@v2
-        with:
-          url: https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
-          name: swiftlint_zip.zip
-          
+        run: wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
+
       - name: Extract SwiftLint
-        uses: ihiroky/extract-action@v1
-        with:
-          file_path: swiftlint_zip.zip
-          extract_dir: /usr/local/bin
+        run: unzip -o swiftlint_linux.zip -d /usr/local/bin
           
       - uses: actions/checkout@v1
       - name: Danger
