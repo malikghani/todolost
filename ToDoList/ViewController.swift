@@ -25,11 +25,10 @@ class ViewController: UIViewController {
         print("creating the items")
         
         
-        let item = 10 as!  CGFloat
+        
         
         
         
         
     }
 }
-
