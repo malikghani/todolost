@@ -12,7 +12,7 @@ jobs:
     name: "Run Danger"
     steps:
       - name: Install Bundler
-        run: gem install bundler -v 2.4.22
+        run: gem install bundler -v 2.4.22 --user-install
 
       - name: Configure Bundler
         run: bundle config silence_root_warning true
