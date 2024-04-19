@@ -8,14 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     name: "Run Danger"
     steps:
-      - name: Download SwiftLint zip
-        run: wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip
-          
       - uses: actions/checkout@v1
-      - run: pwd && wget https://github.com/realm/SwiftLint/releases/download/0.54.0/swiftlint_linux.zip && unzip -o swiftlint_linux.zip -d /usr/local/bin && ls
       - name: Danger
         uses: danger/swift@3.18.1
         with:
