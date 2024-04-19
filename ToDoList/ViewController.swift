@@ -22,10 +22,14 @@ class ViewController: UIViewController {
     }
     
     func createItems()   {
-        print("creating the items")
+        print("creating the items" )
         
         
         
+    }
+    
+func testCalculation() {
+    let a = 10 as! CGFloat
     }
 }
 
