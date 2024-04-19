@@ -2,19 +2,15 @@ name: SwiftLint
 
 on:
   pull_request:
-    types: [opened, reopened, edited, synchronize]
     paths:
+      - '.github/workflows/swiftlint.yml'
+      - '.swiftlint.yml'
       - '**/*.swift'
 
 jobs:
-  build:
+  SwiftLint:
     runs-on: ubuntu-latest
-    name: "Run Danger"
     steps:
-      - uses: actions/checkout@v1
-      - name: Danger
-        uses: docker://ghcr.io/danger/danger-swift-with-swiftlint:3.15.0
-        with:
-            args: --failOnErrors --no-publish-check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+      - name: GitHub Action for SwiftLint
+        uses: stanfordbdhg/action-swiftlint@v4
