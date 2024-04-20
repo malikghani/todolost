@@ -8,27 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    func createToDoList() -> String {
+        let value = 300
 
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
-    func createToDoList () -> String{
-        let value :Int = 300
-        
         return "\(value)"
     }
-    
-    func createItems()   {
+
+    func createItems() {
         print("creating the items")
-        
-        
-        
-        
-        
-        
-        
+    }
+
+    override func viewDidLoad() {
+        let ihh = ["str"]
+        for item in ihh {
+            print(item)
+        }
     }
 }
